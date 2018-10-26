@@ -69,6 +69,9 @@ data Exp a n
 
         -- | Witness can appear as the argument of an application.
         | XWitness !(Witness a n)
+
+        -- | Async binding.
+        | XAsync !(Bind n) !(Exp a n) !(Exp a n)
         deriving (Show, Eq)
 
 
